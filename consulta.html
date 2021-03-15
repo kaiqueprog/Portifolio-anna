@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <title>Portifolio anna - PAINEL</title>
+
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/animate.css" rel="stylesheet"/>
+  <link href="css/paper-dashboard.css" rel="stylesheet"/>
+  <link href="css/demo.css" rel="stylesheet" />
+  <link href="css/main.css" rel="stylesheet" />
+
+  <!--  Fonts and icons     -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <script src="js/app.js"></script>
+
+</head>
+<body  class="dark" onload="carregarDespesas()">
+
+<div class="wrapper">
+  <!-- Menu inicio -->
+  <div class="sidebar">
+    <div class="sidebar-wrapper">
+      <div class="logo">
+        <a href="index.html" class="simple-text">Portifolio anna</a>
+      </div>
+
+      <ul class="nav">
+        <li><a href="index.html"><i class='bx bxs-book-content'></i><p>Painel</p></a></li>
+        <li><a href="user.html"><i class='bx bx-user'></i><p>Criar usuário</p></a></li>
+        <li><a class="active" href="consulta.html"><i class='bx bx-list-ul'></i><p>Consulta</p></a></li>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="main-panel">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle">
+            <span class="sr-only">Navegação</span>
+            <span class="icon-bar bar1"></span>
+            <span class="icon-bar bar2"></span>
+            <span class="icon-bar bar3"></span>
+          </button>
+          <a class="navbar-brand" href="" onclick="reload()">Painel</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a class="dia-e-noite">
+                <i class='nt bx bx-moon'></i><p id="dn">Modo Noite</p>
+            </a>
+            </li>
+            <li>
+              <a href="#" onclick="alert('Não mexa ai')">
+                <i class='bx bx-git-pull-request'></i><p>Estatísticas</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Menu fim -->
+
+    <!-- conteudo inicio -->
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="header">
+                <h4 class="title">Consulta de despesas</h4>
+                <p class="category">Faça uma pesquisa especifica</p>
+              </div>
+              <div class="content">
+                <form>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <label>Nome</label>
+                        <input type="text" class="form-control border-input" placeholder="Nome do cliente" id="nome">
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Data de vencimento</label>
+                        <input type="date" class="form-control border-input" placeholder="Ano" id="data">
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Valor</label>
+                        <input type="number" min="1" class="form-control border-input" placeholder="valor" id="valor">
+                      </div>
+                    </div>
+                    <div class="col-md-1">
+                      <div>
+                        <a class="btn btn-primary"><i class='bx bx-search'></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-12">
+            <div class="card card-plain">
+              <div class="header">
+                <h4 class="title">Lista de consulta</h4>
+              </div>
+              <div class="content table-responsive table-full-width">
+                <table class="table table-hover">
+                    <thead>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Valor</th>
+                    <th>Data</th>
+                    <th>Descrição</th>
+                    <th>Remover</th>
+                    </thead>
+                    <tbody id="listaDespesas">
+                    
+                    </tbody>
+                  </table>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- conteudo fim -->
+    
+
+
+    <!-- Rodapé inicio  -->
+    <footer class="footer">
+      <div class="container-fluid">
+        <nav class="pull-left">
+          <ul>
+            <li><a href="index.html"><p>Painel</p></a></li>
+            <li><a href="user.html"><p>Criar usuário</p></a></li>
+            <li><a href="consulta.html"><p>Consulta</p></a></li>
+          </ul>
+        </nav>
+        <div class="copyright pull-right">
+          &copy; <script>document.write(new Date().getFullYear())</script>, feito por <i class="fa fa-heart heart"></i> <a href="https://www.youtube.com/c/KaiqueSous">KaiqueSous</a>
+        </div>
+      </div>
+    </footer>
+    <!-- Rodapé fim -->
+
+  </div>
+</div>
+<!--   Core JS Files   -->
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+<!-- Paper Dashboard Core javascript and methods for Demo purpose -->
+<script src="js/paper-dashboard.js"></script>
+
+<!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+<script src="js/demo.js"></script>
+<script src="js/jquery.sharrre.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        demo.initChartist();
+
+        $.notify({
+          message: "Por em quando tudo ok"
+        },{
+            type: 'success',
+            timer: 4000
+        });
+
+    });
+</script>
+</body>
+</html>
+

@@ -1,0 +1,94 @@
+/*Global css
+**********************************************/
+
+:root {
+    --principal-color: #fff;
+    --principal-dark: #212120;
+    --main-to-dark-color: var(--principal-color);
+    --dark-to-main-color: var(--principal-dark);
+}
+body.dark {
+    background-color: var(--principal-dark);
+    --black-100: var(--principal-dark);
+    --black-000: var(--principal-dark);
+    --main-to-dark-color: var(--principal-dark);
+    --dark-to-main-color: var(--main-color);
+    --shadow-black-100: var(--shadow-black-300);
+    --black-alpha-100: rgba(255,255,255,0.05);
+    --black-900: #fff;
+    --black-400: #ddd;  
+}
+.sidebar,.sidebar-wrapper {
+    overflow: hidden!important;
+}
+div.card {
+    background-color: var(--main-to-dark-color);
+    color: var(--black-900);
+}
+span.ct-label {
+    color: var(--black-900);
+}
+.navbar-default,.sidebar-wrapper {
+    background-color: var(--main-to-dark-color)!important;
+    color: var(--black-900)!important;
+}
+a.navbar-brand {
+    color: var(--black-900)!important;
+}
+.card .stats {
+    color: #dadada;
+}
+
+.card .category, .card label {
+    font-size: 14px;
+    font-weight: 400;
+    color: #9A9A9A;
+    margin-bottom: 0px;
+}
+ div.logo a {
+     color: var(--black-900)!important;
+ }
+
+ ul.nav li a i,
+ ul.nav li a{
+    color: #b7bcb7!important;
+}
+
+ ul.nav li.active a,
+ ul.nav li.active i{
+    color: #eb5a25!important;
+}
+tbody tr td {
+    color: #000;
+}
+table.table-hover tbody tr td{
+    color: var(--black-900);
+}
+table.table-hover tbody tr:hover {
+    background-color: black;
+}
+h4.title {
+    color: var(--black-900)!important;
+}
+footer.footer {
+    background-color: var(--main-to-dark-color);
+}
+footer.footer li a {
+    color: var(--black-400)!important;
+}
+footer.footer div.copyright {
+    color: var(--black-400)!important;
+}
+footer.footer {
+    background-color: var(--main-to-dark-color);
+}
+input.form-control::placeholder,
+textarea.form-control::placeholder {
+    color: #7c7777;
+}
+.lista {
+    height: auto;
+}
+.dia-e-noite {
+    cursor: pointer;
+}
